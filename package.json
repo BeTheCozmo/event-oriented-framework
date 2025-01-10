@@ -1,11 +1,12 @@
 {
   "name": "reactive-event-framework",
-  "version": "1.0.1",
-  "main": "src/main.ts",
+  "version": "1.0.0",
+  "main": "main.ts",
   "scripts": {
     "dev": "tsx --watch .",
     "build": "tsc -p .",
     "start": "node ./dist/main.js",
+    "push": "npm version patch && npm publish",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

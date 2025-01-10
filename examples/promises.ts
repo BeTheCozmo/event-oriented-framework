@@ -1,5 +1,5 @@
-import { LifecycleManager } from "../src/lib/LifecycleManager";
-import { waitForEvent } from "../src/lib/utils";
+import { LifecycleManager } from "../lib/LifecycleManager";
+import { waitForEvent } from "../lib/utils";
 import { SumEvents, SumSystem } from "./sum";
 
 const lifecycleManager = new LifecycleManager();

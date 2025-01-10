@@ -1,4 +1,4 @@
-import { LifecycleManager } from "../src/lib/LifecycleManager";
+import { LifecycleManager } from "../lib/LifecycleManager";
 import { SumSystem } from "./sum";
 
 const lifecycleManager = new LifecycleManager();
