@@ -2,9 +2,9 @@ import { LifecycleManager } from "../src/lib/LifecycleManager";
 import { SumSystem } from "./sum";
 
 const lifecycleManager = new LifecycleManager();
-const { logSystem, monitoringSystem } = lifecycleManager.getBaseModules();
+const { logSystem } = lifecycleManager.getBaseModules();
 
-const sumSystem = new SumSystem(monitoringSystem);
+const sumSystem = new SumSystem();
 lifecycleManager.registerConfigurationStep(() => { sumSystem.configure({logger: logSystem}); });
 lifecycleManager.configure();
 
