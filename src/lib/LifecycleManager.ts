@@ -41,9 +41,7 @@ export class LifecycleManager {
   }
 
   configure() {
-    for(const step of this.steps) {
-      step();
-    }
+    for(const step of this.steps) step();
     this.modules.logSystem.info("LifecycleManager", "All configuration steps runned.");
   }
 
