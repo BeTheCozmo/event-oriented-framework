@@ -1,6 +1,6 @@
 
-import { BaseEmitter } from "../lib/BaseEmitter";
-import { LogSystem } from "../lib/LogSystem";
+import { BaseEmitter } from "../src/lib/BaseEmitter";
+import { LogSystem } from "../src/lib/LogSystem";
 
 export type SumConfig = {
   logger: LogSystem;

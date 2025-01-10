@@ -1,4 +1,4 @@
-import { LifecycleManager } from "../lib/LifecycleManager";
+import { LifecycleManager } from "../src/lib/LifecycleManager";
 import { SumSystem } from "./sum";
 
 const lifecycleManager = new LifecycleManager();
@@ -14,6 +14,7 @@ lifecycleManager.start(() => {
   sumSystem.accept("sumError", (message) => logSystem.error(sumSystem.name, message));
   
   /*
+  * Experiment adding more numbers to the array given as argument
   * You can try to change the array to another type of value
   * You will receive an error handled by the SumSystem
   */

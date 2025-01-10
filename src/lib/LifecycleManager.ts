@@ -55,6 +55,6 @@ export class LifecycleManager {
 
   public async start(func: () => void) {
     func();
-    this.modules.logSystem.info("LifecycleManager", 'All modules initiated succesfully.');
+    this.modules.logSystem.info("LifecycleManager", 'All modules executed succesfully.');
   }
 }

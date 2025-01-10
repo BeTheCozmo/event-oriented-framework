@@ -1,2 +1,2 @@
-// import "./examples/main";
-import "./examples/promises";
+import "../examples/basic-use";
+// import "../examples/promises";
