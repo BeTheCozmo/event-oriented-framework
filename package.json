@@ -1,5 +1,5 @@
 {
-  "name": "@bethecozmo/eventframework",
+  "name": "reactive-event-framework",
   "version": "1.0.0",
   "main": "src/main.ts",
   "scripts": {
