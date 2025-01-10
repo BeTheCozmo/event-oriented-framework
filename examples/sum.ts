@@ -1,4 +1,3 @@
-
 import { BaseEmitter } from "../lib/BaseEmitter";
 import { LogSystem } from "../lib/LogSystem";
 
