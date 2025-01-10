@@ -8,6 +8,7 @@ export type SumConfig = {
 export type SumEvents = {
   sumRequest: number[];
   sumProcessed: number;
+  sumError: string;
 }
 
 export class SumSystem extends BaseEmitter<SumConfig, SumEvents> {
@@ -25,6 +26,9 @@ export class SumSystem extends BaseEmitter<SumConfig, SumEvents> {
 
   sum(numbers: number[]) {
     this.ensureConfigured();
+    if(typeof numbers != "object")
+      return this.send("sumError", "The argument is not a list of numbers.");
+    
     const sum = numbers.reduce((pv, cv) => cv + pv , 0);
     this.logger.info(this.name, "Sum processed");
     this.send("sumProcessed", sum);
