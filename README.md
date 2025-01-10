@@ -18,7 +18,6 @@
 
 ## Installation
 
-Explain how to install your library using npm or yarn:
 
 ```bash
 npm install reactive-event-framework
@@ -30,9 +29,6 @@ yarn add reactive-event-framework
 
 ## Usage
 
-Show how to import and use your library in a Node.js project:
-
-### ES Modules
 
 ```typescript
 import { LifecycleManager } from "reactive-event-framework";
@@ -183,41 +179,40 @@ lifecycleManager.start(async () => {
 
 ## API
 
-List all the functions, classes, methods, or objects exposed by the library with descriptions and examples:
 ### `BaseEmitter`
 #### Methods
-- configure(config: EmitterConfig): void
+- `configure(config: EmitterConfig): void`
   - Used to configure all the dependencies that the implementer needs.
   - Obrigatory.
-- setConfigured(): void
+- `setConfigured(): void`
   - Used inside your implementation of configure() to change the state of the class to configured.
   - Without calling this, your systems will fail.
-- ensureConfigured(): void
+- `ensureConfigured(): void`
   - Should be called in the first line of your methods to guarantee that the class is configured.
-- send<K extends keyof T>(event: K, ...args: T[K] | any): boolean
+- `send<K extends keyof T>(event: K, ...args: T[K] | any): boolean`
   - If the class with this method is listening the `event`, then send args as argument.
   - It is like EventEmiiter.emit.
   - Returns `true` if the event had listeners, `false` otherwise.
-- accept<K extends keyof T>(event: K, listener: (arg: T[K]) => void): this
+- `accept<K extends keyof T>(event: K, listener: (arg: T[K]) => void): this`
   - Register a `event` to listen the resonse.
   - Will be triggered when the system `send` a event that you are listening.
-- configureAccepts(): void
+- `configureAccepts(): void`
   - You need to implement this method;
   - This should be called to configure all the events your system accepts, like in [Examples](#examples)
 
 ### `LifecycleManager`
 #### Methods
 
-- getBaseModules(): object
+- `getBaseModules(): object`
   - Return the base modules to this library, it is EnvSystem, LogSystem and MonitoringSystem.
 
-- registerConfigurationStep(step: LifecycleStep) | type LifecycleStep = () => void
+- `registerConfigurationStep(step: LifecycleStep) | type LifecycleStep = () => void`
   - Register and step of configuration.
   - It should be used to configure your system using system.configure().
   - It should be used before LifecycleManager.configure()
-- configure()
+- `configure()`
   - Finishes all configuration steps and prepare you to execute your application.
-- start(func: () => void)
+- `start(func: () => void)`
   - The callback that you put the code necessary to start your systems.
 
 ---
@@ -233,9 +228,6 @@ Optionally, link to a `CONTRIBUTING.md` file for more details.
 ---
 
 ## License
-
-Specify the license used by your library (e.g., MIT, Apache 2.0):
-
 This library is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
