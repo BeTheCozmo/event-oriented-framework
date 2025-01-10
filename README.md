@@ -1,6 +1,6 @@
 # Reactive Event Framework
 
-> A new way to develop and link systems flows.
+> Reactive Event Framework is a Node.js library for building reactive, event-driven system flows with ease and flexibility. It provides tools to manage application lifecycles and simplify system interactions.
 
 ---
 
@@ -44,7 +44,7 @@ lifecycleManager.registerConfigurationStep(() => {
 lifecycleManager.configure();
 
 lifecycleManager.start(async () => {
-  /* The code to trigger all systems */
+  logSystem.info("Main", "Application started!");
 });
 ```
 
