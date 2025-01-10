@@ -1,6 +1,6 @@
 {
   "name": "reactive-event-framework",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "main.ts",
   "scripts": {
     "dev": "tsx --watch .",
