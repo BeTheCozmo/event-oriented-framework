@@ -56,7 +56,7 @@ lifecycleManager.start(async () => {
 
 ## Configuration
 
-This lib requires only some environment variables to work:
+This lib requires some environment variables to work:
 
 - MONITORING_EVENTS_STACK_SIZE
   - Default: 1000
