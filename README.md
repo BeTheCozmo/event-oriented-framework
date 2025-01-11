@@ -227,8 +227,6 @@ lifecycleManager.start(async () => {
 2. Create a branch for your feature or fix: `git checkout -b my-feature`.  
 3. Submit a pull request.  
 
-Optionally, link to a `CONTRIBUTING.md` file for more details.
-
 ---
 
 ## License
