@@ -1,5 +1,9 @@
 # Reactive Event Framework
 
+[![Sponsor](https://img.shields.io/badge/Sponsor-GitHub%20Sponsors-ff69b4)](https://github.com/sponsors/BeTheCozmo)
+![npm version](https://img.shields.io/npm/v/reactive-event-framework)
+![downloads](https://img.shields.io/npm/dt/reactive-event-framework)
+
 > Reactive Event Framework is a Node.js library for building reactive, event-driven system flows with ease and flexibility. It provides tools to manage application lifecycles and simplify system interactions.
 
 ---
@@ -232,6 +236,3 @@ This library is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-- ![npm version](https://img.shields.io/npm/v/reactive-event-framework)
-- ![build status](https://img.shields.io/github/actions/workflow/status/bethecozmo/reactive-event-framework/build.yml)
-- ![downloads](https://img.shields.io/npm/dt/reactive-event-framework)
