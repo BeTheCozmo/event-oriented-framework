@@ -21,7 +21,7 @@ export class MonitoringSystem extends BaseEmitter<MonitoringConfig, MonitoringEv
   }
   
   register<K>(type: "send" | "accept", event: K, args: any) {
-    let exceed = (!this.envSystem ? 1000 : (this.events.length - Number(this.envSystem.getVar("monitoringStackSize", 1000))));
+    let exceed = (!this.envSystem ? 1000 : (this.events.length - Number(this.envSystem.getVar("MONITORING_EVENTS_STACK_SIZE", 1000))));
     while(exceed-- > 0) this.events.shift();
     this.events.push({type, event, args});
   }

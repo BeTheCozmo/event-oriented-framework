@@ -26,8 +26,9 @@ export class EnvSystem extends BaseEmitter<EnvConfig, {}> {
     }
     for(const variable of config.variables) {
       const key = Object.keys(variable)[0];
-      this.variables.set(key, variable[key]);
+      this.setVar(key, variable[key]);
     }
+    for(const varKey of Object.keys(process.env)) this.setVar(varKey, process.env[varKey]);
 
     this.configureAccepts();
     this.setConfigured();
