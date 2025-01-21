@@ -1,8 +1,10 @@
 import { BaseEmitter } from "./BaseEmitter";
+import { EnvSystem } from "./EnvSystem";
 import { MonitoringSystem } from "./MonitoringSystem";
 
 type LogSystemConfig = {
-  monitoringSystem: MonitoringSystem
+  monitoringSystem: MonitoringSystem;
+  debugEnabled: boolean;
 };
 type LogEvents = {
   info: string[];
@@ -13,9 +15,12 @@ type LogEvents = {
 
 export class LogSystem extends BaseEmitter<LogSystemConfig, LogEvents> {
   name: string = "LogSystem";
+  debugEnabled = false;
   
   configure(config: LogSystemConfig) {
     this.monitoringSystem = config.monitoringSystem;
+    this.debugEnabled = config.debugEnabled;
+
     this.configureAccepts();
     this.setConfigured();
 
@@ -43,6 +48,7 @@ export class LogSystem extends BaseEmitter<LogSystemConfig, LogEvents> {
   }
 
   debug(caller: string, ...args: any[]) {
+    if(!this.debugEnabled) return;
     let fulltext = "";
     for(const arg of args) {
       fulltext += ` ${arg}`;

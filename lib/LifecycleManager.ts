@@ -33,7 +33,8 @@ export class LifecycleManager {
       ]
     });
     logSystem.configure({
-      monitoringSystem
+      monitoringSystem,
+      debugEnabled: envSystem.getVar("DEBUG", "false") == "true",
     });
     monitoringSystem.configure({
       envSystem
